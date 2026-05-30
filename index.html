@@ -1,519 +1,224 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dr. Ali Hmidoush | Portfolio</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-
-        :root {
-
-            --primary: #0056b3;
-
-            --secondary: #2c3e50;
-
-            --accent: #d9534f; /* Humanitarian Red */
-
-            --innovation: #00a8cc; /* Innovation Blue */
-
-            --bg: #f8f9fa;
-
-            --text: #333;
-
-            --light: #ffffff;
-
-        }
-
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; } /* Makes jumping between sections smooth */
-
-        
-
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); }
-
-        
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-        section { padding: 80px 0; border-bottom: 1px solid #eee; scroll-margin-top: 70px; }
-
-
-        /* NAVIGATION BAR */
-
-        nav {
-
-            background: #ffffff;
-
-            padding: 15px 0;
-
-            position: sticky;
-
-            top: 0;
-
-            z-index: 1000;
-
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-
-            text-align: center;
-
-        }
-
-        nav a {
-
-            text-decoration: none;
-
-            color: var(--secondary);
-
-            font-weight: 600;
-
-            margin: 0 15px;
-
-            font-size: 0.85rem;
-
-            transition: 0.3s;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1px;
-
-        }
-
-        nav a:hover { color: var(--primary); }
-
-
-        /* HERO / HEADER */
-
-        header { 
-
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-
-            color: white;
-
-            padding: 100px 0 60px;
-
-            text-align: center;
-
-        }
-
-        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.2); margin-bottom: 20px; object-fit: cover; }
-
-        h1 { font-size: 2.8rem; margin-bottom: 10px; }
-
-        .tagline { font-size: 1.2rem; opacity: 0.9; margin-bottom: 25px; font-weight: 300; }
-
-        
-
-        .contact-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-
-        .contact-links a { color: white; text-decoration: none; font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 25px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.2); }
-
-        .contact-links a:hover { background: var(--light); color: var(--primary); }
-
-
-        /* CARDS & LAYOUT */
-
-        h2 { color: var(--primary); margin-bottom: 35px; font-size: 1.8rem; display: flex; align-items: center; gap: 12px; }
-
-        .card { background: var(--light); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 5px solid var(--primary); }
-
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-
-        .role { font-weight: bold; font-size: 1.3rem; color: var(--secondary); }
-
-        .company { color: var(--primary); font-weight: 600; font-size: 1.1rem; }
-
-        .date { font-size: 0.85rem; color: #666; background: #f0f0f0; padding: 4px 12px; border-radius: 20px; font-weight: 500; }
-
-        
-
-        .pub-link { display: block; padding: 20px; background: white; border-radius: 10px; margin-bottom: 15px; text-decoration: none; color: var(--text); border: 1px solid #eee; transition: 0.3s; }
-
-        .pub-link:hover { border-color: var(--primary); transform: translateX(5px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-
-
-        footer { background: #f1f1f1; text-align: center; padding: 60px 0; color: #555; }
-
-
-        @media (max-width: 768px) {
-
-            nav a { margin: 0 5px; font-size: 0.7rem; }
-
-            .card-header { flex-direction: column; }
-
-            h1 { font-size: 2rem; }
-
-        }
-
-    </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ali Hmidoush | Portfolio</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* This section controls all the colors and "Blue" look */
+        :root {
+            --primary-blue: #0056b3;
+            --dark-blue: #1a2a6c;
+            --medical-blue: #eef2f7;
+            --text-dark: #2c3e50;
+            --humanitarian-red: #d9534f;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #f4f7f6; }
+
+        /* Navigation Menu */
+        nav {
+            background: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin: 0 15px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--primary-blue); }
+
+        /* The Big Blue Header */
+        header { 
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+        .profile-img { width: 170px; height: 170px; border-radius: 50%; border: 6px solid rgba(255,255,255,0.2); margin-bottom: 25px; object-fit: cover; }
+        h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: -1px; }
+        .tagline { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; font-weight: 300; }
+        
+        .contact-pill { display: inline-flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .contact-pill a { color: var(--white); text-decoration: none; background: rgba(255,255,255,0.15); padding: 10px 20px; border-radius: 30px; font-size: 0.9rem; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .contact-pill a:hover { background: var(--white); color: var(--primary-blue); }
+
+        /* Main Content Layout */
+        .container { max-width: 1050px; margin: 0 auto; padding: 0 30px; }
+        section { padding: 90px 0; border-bottom: 1px solid #e0e0e0; scroll-margin-top: 70px; }
+        
+        h2 { color: var(--primary-blue); font-size: 2rem; margin-bottom: 40px; display: flex; align-items: center; gap: 15px; }
+        h2 i { color: var(--dark-blue); }
+
+        /* Content Cards */
+        .card { 
+            background: var(--white); 
+            padding: 35px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+            margin-bottom: 30px; 
+            border-left: 6px solid var(--primary-blue);
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .job-title { font-weight: 800; font-size: 1.4rem; color: var(--dark-blue); }
+        .org-name { color: var(--primary-blue); font-weight: 600; font-size: 1.1rem; }
+        .date-label { font-size: 0.85rem; color: #777; background: #f0f2f5; padding: 5px 15px; border-radius: 20px; }
+
+        /* Publications links */
+        .research-item { display: block; background: var(--white); padding: 25px; border-radius: 12px; margin-bottom: 15px; text-decoration: none; color: inherit; border: 1px solid #eee; transition: 0.3s; }
+        .research-item:hover { border-color: var(--primary-blue); background: var(--medical-blue); }
+        .research-item strong { color: var(--dark-blue); display: block; margin-bottom: 5px; font-size: 1.1rem; }
+
+        footer { background: #1a2a6c; color: white; text-align: center; padding: 80px 20px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            nav a { margin: 0 8px; font-size: 0.75rem; }
+            .card-header { flex-direction: column; }
+            .date-label { margin-top: 10px; display: inline-block; }
+        }
+    </style>
 </head>
+<body id="home">
 
-<body id="top">
-
-
-<!-- 1. NAVIGATION BAR -->
-
+<!-- NAVIGATION -->
 <nav>
-
-    <div class="container">
-
-        <a href="#top">Home</a>
-
-        <a href="#research">Research</a>
-
-        <a href="#innovation">Innovation</a>
-
-        <a href="#humanitarian">Humanitarian</a>
-
-        <a href="#projects">Projects</a>
-
-        <a href="#contact">Contact</a>
-
-    </div>
-
+    <div class="container">
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#innovation">Innovation</a>
+        <a href="#humanitarian">Humanitarian</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
-
-<!-- 2. HOME SECTION (HEADER) -->
-
+<!-- HERO SECTION -->
 <header>
-
-    <div class="container">
-
-        <img src="images/profile.jpg" alt="Dr. Ali Hmidoush" class="profile-img" onerror="this.src='https://via.placeholder.com/160'">
-
-        <h1>Dr. Ali Hmidoush</h1>
-
-        <p class="tagline">Doctor of Medicine | Founder & CEO of ReneurAI | Public Health Leader</p>
-
-        
-
-        <div class="contact-links">
-
-            <a href="mailto:hmidoushali0@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-
-            <a href="https://www.linkedin.com/in/ali-hmidoush-md-92aaa2297/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-
-            <a href="#"><i class="fas fa-map-marker-alt"></i> Latakia, Syria</a>
-
-        </div>
-
-    </div>
-
+    <div class="container">
+        <img src="images/profile.jpg" alt="Dr. Ali Hmidoush" class="profile-img" onerror="this.src='https://via.placeholder.com/170/0056b3/FFFFFF?text=Dr.+Ali'">
+        <h1>Dr. Ali Hmidoush</h1>
+        <p class="tagline">Doctor of Medicine | Founder & CEO of ReneurAI | Public Health Leader</p>
+        
+        <div class="contact-pill">
+            <a href="mailto:hmidoushali0@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/ali-hmidoush-md-92aaa2297/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Latakia, Syria</a>
+        </div>
+    </div>
 </header>
 
-
 <div class="container">
-
-    
-
-    <!-- 3. RESEARCH SECTION -->
-
-    <section id="research">
-
-        <h2><i class="fas fa-microscope"></i> Research & Publications</h2>
-
-        
-
-        <a href="#" class="pub-link">
-
-            <strong>Investigating The Impact of Syrian Conflict On Women's Education, Mental Health, and Rights</strong>
-
-            <p style="color: #666; font-size: 0.9rem; margin-top: 5px;">Lead Researcher | Cross-Sectional Study</p>
-
-        </a>
-
-
-        <a href="#" class="pub-link">
-
-            <strong>Total quality management in healthcare from provider and patient perspectives</strong>
-
-            <p style="color: #666; font-size: 0.9rem; margin-top: 5px;">Al-Mouwasat University Hospital Study</p>
-
-        </a>
-
-
-        <a href="#" class="pub-link">
-
-            <strong>Associations between socio-demographic factors and sleep quality among GERD patients in Syria</strong>
-
-            <p style="color: #666; font-size: 0.9rem; margin-top: 5px;">Cross-Sectional Study</p>
-
-        </a>
-
-    </section>
-
-
-    <!-- 4. INNOVATION SECTION -->
-
-    <section id="innovation">
-
-        <h2 style="color: var(--innovation);"><i class="fas fa-lightbulb"></i> Innovation & Tech Leadership</h2>
-
-
-        <div class="card" style="border-left-color: var(--innovation);">
-
-            <div class="card-header">
-
-                <div>
-
-                    <div class="role">Founder & CEO</div>
-
-                    <div class="company">ReneurAI</div>
-
-                </div>
-
-                <div class="date">06/2025 – Current</div>
-
-            </div>
-
-            <p>Developing AI-powered diagnostics and digital health education for resource-limited settings.</p>
-
-            <ul style="margin-top: 10px; margin-left: 20px;">
-
-                <li>Lead development of AI-driven clinical tools for early disease detection.</li>
-
-                <li>Strategic partnerships for adapting health solutions to fragile systems.</li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="card" style="border-left-color: var(--innovation);">
-
-            <div class="card-header">
-
-                <div>
-
-                    <div class="role">Director of Website & SEO</div>
-
-                    <div class="company">ResRef</div>
-
-                </div>
-
-                <div class="date">01/2025 – Current</div>
-
-            </div>
-
-            <p>Global research platform: <a href="http://www.ResRef.com" target="_blank">www.ResRef.com</a></p>
-
-            <ul style="margin-top: 10px; margin-left: 20px;">
-
-                <li>Leading multidisciplinary teams of developers and designers.</li>
-
-                <li>Improving medical research capacity for Syrian healthcare professionals.</li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-
-    <!-- 5. HUMANITARIAN SECTION -->
-
-    <section id="humanitarian">
-
-        <h2 style="color: var(--accent);"><i class="fas fa-hand-holding-heart"></i> Humanitarian Work</h2>
-
-        
-
-        <div class="card" style="border-left-color: var(--accent);">
-
-            <div class="card-header">
-
-                <div>
-
-                    <div class="role">Team Leader</div>
-
-                    <div class="company">Our Elders Association</div>
-
-                </div>
-
-                <div class="date">2023 – Current</div>
-
-            </div>
-
-            <ul>
-
-                <li><strong>Earthquake Relief:</strong> Organized medical aid and psychological support post-2023.</li>
-
-                <li><strong>Wildfire Response:</strong> Emergency relief efforts during the 2025 Latakia wildfires.</li>
-
-                <li><strong>Public Health:</strong> Health education sessions for vulnerable elderly populations.</li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-
-    <!-- 6. PROJECTS SECTION -->
-
-    <section id="projects">
-
-        <h2><i class="fas fa-project-diagram"></i> Initiatives & Workshops</h2>
-
-        
-
-        <div class="card">
-
-            <div class="role">BioMedArt Initiative</div>
-
-            <p>Founded this project to bridge art and science. Showcased at the National Museum of Damascus.</p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="role">Medical Research Workshops</div>
-
-            <p>Delivered workshops to 70+ young researchers in Syria to simplify research knowledge.</p>
-
-        </div>
-
-    </section>
-
-
-</div>
-
-
-<!-- 7. CONTACT SECTION (FOOTER) -->
-
-<footer id="contact">
-
-    <div class="container">
-
-        <h2><i class="fas fa-envelope-open-text"></i> Get In Touch</h2>
-
-        <p>Looking to collaborate on Digital Health or Research? Let's connect.</p>
-
-        <div class="contact-links" style="margin-top: 20px;">
-
-            <a href="mailto:hmidoushali0@gmail.com" style="color: var(--secondary); border-color: var(--secondary);"><i class="fas fa-envelope"></i> Email Me</a>
-
-            <a href="https://www.linkedin.com/in/ali-hmidoush-md-92aaa2297/" target="_blank" style="color: var(--secondary); border-color: var(--secondary);"><i class="fab fa-linkedin"></i> LinkedIn</a>
-
-        </div>
-
-        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.6;">&copy; 2023 Dr. Ali Hmidoush. All Rights Reserved.</p>
-
-    </div>
-
-</footer>
-
-
-</body>
-
-</html>
-
-                <div class="date">06/2025 – Current</div>
-            </div>
-            <p>Developing AI-powered tools for diagnostics and early disease detection in resource-limited settings.</p>
-            <ul>
-                <li>Lead development of AI-driven clinical and public-health tools.</li>
-                <li>Drive strategic partnerships for fragile health systems.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="role">Director of Website and SEO Department</div>
-                    <div class="company">ResRef – Remote</div>
-                </div>
-                <div class="date">01/2025 – Current</div>
-            </div>
-            <p>Global digital platform for research tools. <a href="http://www.ResRef.com" target="_blank">www.ResRef.com</a></p>
-            <ul>
-                <li>Lead multidisciplinary team of developers and SEO specialists.</li>
-                <li>Rebuilding medical research capacity in Syria via access to educational materials.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="role">Project Manager & Advisor</div>
-                    <div class="company">Syrian Professional Network (Syrpronet)</div>
-                </div>
-                <div class="date">12/2023 – Current</div>
-            </div>
-            <ul>
-                <li>Manage research projects on Syrian refugee cultural transitions and identity loss.</li>
-                <li>Authored articles on mental health and AI in medicine.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-        <h2><i class="fas fa-tools"></i> Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3><i class="fas fa-laptop-code"></i> Technical & Digital</h3>
-                <span class="skill-tag">Python</span> <span class="skill-tag">R</span> 
-                <span class="skill-tag">C++</span> <span class="skill-tag">SEO</span> 
-                <span class="skill-tag">Advanced Statistics</span>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-microscope"></i> Research</h3>
-                <span class="skill-tag">Scientific Writing</span> <span class="skill-tag">Study Design</span> 
-                <span class="skill-tag">Mendeley/EndNote</span> <span class="skill-tag">Data Collection</span>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-heartbeat"></i> Public Health</h3>
-                <span class="skill-tag">Infection Control (IPC)</span> <span class="skill-tag">Health Promotion</span> 
-                <span class="skill-tag">Crisis Response</span> <span class="skill-tag">Psychosocial Support</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-        <h2><i class="fas fa-book"></i> Selected Publications</h2>
-        <a href="#" class="pub-link">
+    
+    <!-- RESEARCH SECTION -->
+    <section id="research">
+        <h2><i class="fas fa-microscope"></i> Research & Publications</h2>
+        
+        <a href="#" class="research-item">
             <strong>Investigating The Impact of Syrian Conflict On Women's Education, Mental Health, and Rights</strong>
-            <p>Cross-Sectional Study</p>
+            <span>Lead Researcher | Cross-Sectional Study</span>
         </a>
-        <a href="#" class="pub-link">
+
+        <a href="#" class="research-item">
             <strong>Total quality management in healthcare from provider and patient perspectives</strong>
-            <p>Al-Mouwasat University Hospital Study</p>
+            <span>Al-Mouwasat University Hospital Study</span>
+        </a>
+
+        <a href="#" class="research-item">
+            <strong>Associations between socio-demographic factors and sleep quality among GERD patients in Syria</strong>
+            <span>Cross-Sectional Study</span>
         </a>
     </section>
 
-    <!-- Education -->
-    <section id="education">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <!-- INNOVATION SECTION -->
+    <section id="innovation">
+        <h2><i class="fas fa-lightbulb"></i> Innovation & Tech Leadership</h2>
+
         <div class="card">
             <div class="card-header">
                 <div>
-                    <div class="role">Doctor of Medicine (MD)</div>
-                    <div class="company">Latakia University</div>
+                    <div class="job-title">Founder & CEO</div>
+                    <div class="org-name">ReneurAI</div>
                 </div>
-                <div class="date">2018 – 2024</div>
+                <div class="date-label">06/2025 – Current</div>
             </div>
+            <p>Developing AI-powered diagnostics and digital health education for resource-limited settings.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="job-title">Director of Website & SEO</div>
+                    <div class="org-name">ResRef</div>
+                </div>
+                <div class="date-label">01/2025 – Current</div>
+            </div>
+            <p>Managing global research platform infrastructure at <a href="http://www.ResRef.com" target="_blank">www.ResRef.com</a></p>
+        </div>
+    </section>
+
+    <!-- HUMANITARIAN SECTION -->
+    <section id="humanitarian">
+        <h2 style="color: var(--humanitarian-red);"><i class="fas fa-hand-holding-heart"></i> Humanitarian Work</h2>
+        
+        <div class="card" style="border-left-color: var(--humanitarian-red);">
+            <div class="card-header">
+                <div>
+                    <div class="job-title">Team Leader</div>
+                    <div class="org-name">Our Elders Association</div>
+                </div>
+                <div class="date-label">2023 – Current</div>
+            </div>
+            <p>Led post-earthquake relief, wildfire response, and public health education for vulnerable populations.</p>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2><i class="fas fa-project-diagram"></i> Key Initiatives</h2>
+        
+        <div class="card">
+            <div class="job-title" style="font-size: 1.1rem;">BioMedArt Initiative</div>
+            <p>Bridging art and science through multidisciplinary exhibitions at the National Museum of Damascus.</p>
+        </div>
+
+        <div class="card">
+            <div class="job-title" style="font-size: 1.1rem;">Medical Research Workshops</div>
+            <p>Empowering 70+ young Syrian researchers with simplified medical research training.</p>
         </div>
     </section>
 
 </div>
 
-<footer>
+<!-- CONTACT SECTION -->
+<footer id="contact">
     <div class="container">
-        <p>&copy; 2023 Dr. Ali Hmidoush. Built with Passion for Medicine & Tech.</p>
+        <h2 style="color: white; justify-content: center;"><i class="fas fa-paper-plane"></i> Contact</h2>
+        <p style="margin-bottom: 30px;">Let's collaborate on Digital Health or Medical Research.</p>
+        <div class="contact-pill">
+            <a href="mailto:hmidoushali0@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+            <a href="https://www.linkedin.com/in/ali-hmidoush-md-92aaa2297/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">&copy; 2023 Dr. Ali Hmidoush. All Rights Reserved.</p>
     </div>
 </footer>
 
